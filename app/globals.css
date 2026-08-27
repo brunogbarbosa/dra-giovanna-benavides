@@ -432,3 +432,35 @@ h1 em { color: var(--sage-dark); }
   .faq { padding-inline: 20px; }
   .mobile-booking { background: var(--sage-dark); border-radius: 999px; }
 }
+
+/* Keep the hero portrait fully framed and isolated from the copy. */
+.hero-copy { position: relative; z-index: 2; }
+.hero-visual {
+  z-index: 1;
+  overflow: hidden;
+  padding: 112px 48px 42px 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.hero-frame {
+  width: min(100%, 620px);
+  height: 100%;
+  border-radius: 280px 280px 20px 20px;
+  background: #ddd0c6;
+  box-shadow: 0 28px 80px rgba(28, 18, 14, .2);
+}
+.hero-frame img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (max-width: 900px) {
+  .hero-visual { min-height: 680px; padding: 36px 24px 28px; }
+  .hero-frame { width: min(100%, 520px); border-radius: 230px 230px 18px 18px; }
+}
+
+@media (max-width: 620px) {
+  .hero-visual { min-height: 590px; padding: 24px 18px; }
+  .hero-frame { border-radius: 190px 190px 14px 14px; }
+}
