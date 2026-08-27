@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowDown, ArrowUpRight, Dot, Plus } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
 
 const bookingUrl = 'https://linktr.ee/dragiovannabenavides';
 const instagramUrl = 'https://www.instagram.com/dragiovannabenavides/';
@@ -110,21 +110,26 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-frame">
               <Image
-                src="/giovanna-clinica.webp"
-                alt="Dra. Giovanna Benavides em ambiente clínico"
+                className="hero-photo hero-photo-desktop"
+                src="/hero-dra-desktop.webp"
+                alt="Dra. Giovanna Benavides em seu consultório"
                 fill
                 priority
                 sizes="(max-width: 800px) 100vw, 48vw"
+              />
+              <Image
+                className="hero-photo hero-photo-mobile"
+                src="/hero-dra-mobile.webp"
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="100vw"
               />
             </div>
             <div className="hero-orbit" aria-hidden="true"><span>01</span><i /></div>
             <p className="hero-caption">São Paulo · Brasil<br />CROSP 169986</p>
           </div>
         </section>
-
-        <div className="manifesto-line" aria-label="Naturalidade, precisão e identidade">
-          <span>Naturalidade</span><Dot aria-hidden="true" /><span>Precisão</span><Dot aria-hidden="true" /><span>Identidade</span><Dot aria-hidden="true" /><span>Naturalidade</span>
-        </div>
 
         <section className="method section-shell" id="metodo">
           <div className="section-index">

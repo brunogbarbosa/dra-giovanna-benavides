@@ -451,21 +451,21 @@ h1 em { color: var(--sage-dark); }
 }
 .hero-frame img {
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
 }
+.hero-photo-mobile { display: none !important; }
 
 @media (max-width: 900px) {
   .hero { padding-top: 76px; }
   .hero-copy { min-height: 570px; }
   .hero-visual { min-height: 520px; height: 520px; padding: 0; }
   .hero-frame { width: 100%; border-radius: 0; }
-  .hero-frame img { object-position: center 27%; }
+  .hero-photo-desktop { display: none !important; }
+  .hero-photo-mobile { display: block !important; }
   .hero-caption { right: 22px; bottom: 20px; }
 }
 
 @media (max-width: 620px) {
   .hero-copy { min-height: 545px; padding-top: 52px; }
   .hero-visual { min-height: 430px; height: 430px; }
-  .hero-frame img { object-position: center 24%; }
-  .manifesto-line { position: relative; z-index: 2; }
 }
