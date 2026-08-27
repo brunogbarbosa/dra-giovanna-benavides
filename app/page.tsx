@@ -111,7 +111,7 @@ export default function Home() {
             <div className="hero-frame">
               <Image
                 className="hero-photo hero-photo-desktop"
-                src="/hero-dra-desktop.webp"
+                src="/giovanna-hero.webp"
                 alt="Dra. Giovanna Benavides em seu consultório"
                 fill
                 priority
