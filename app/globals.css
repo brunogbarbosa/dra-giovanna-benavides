@@ -470,12 +470,16 @@ h1 em { color: var(--sage-dark); }
   .hero-visual {
     min-height: 0;
     height: auto;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: auto;
   }
+  .hero-frame { height: auto; }
   .hero-photo-mobile {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
     transform: none;
-    object-fit: contain !important;
-    object-position: center !important;
+    object-fit: initial !important;
   }
   .method { padding-top: 72px; }
 }

@@ -111,7 +111,7 @@ export default function Home() {
             <div className="hero-frame">
               <Image
                 className="hero-photo hero-photo-desktop"
-                src="/giovanna-hero.webp"
+                src="/hero-dra-desktop.webp"
                 alt="Dra. Giovanna Benavides em seu consultório"
                 fill
                 priority
@@ -119,10 +119,11 @@ export default function Home() {
               />
               <Image
                 className="hero-photo hero-photo-mobile"
-                src="/hero-dra-desktop.webp"
+                src="/giovanna-hero.webp"
                 alt=""
                 aria-hidden="true"
-                fill
+                width={963}
+                height={1440}
                 sizes="100vw"
               />
             </div>
