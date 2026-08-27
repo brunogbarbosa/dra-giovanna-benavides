@@ -456,7 +456,13 @@ h1 em { color: var(--sage-dark); }
 .hero-photo-mobile-full { display: none; }
 
 @media (max-width: 900px) {
-  .hero { padding-top: 76px; }
+  .hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    padding-top: 76px;
+  }
   .hero-copy { min-height: 570px; }
   .hero-visual {
     min-height: 0;
