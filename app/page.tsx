@@ -110,8 +110,8 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-frame">
               <Image
-                src="/giovanna-hero.webp"
-                alt="Dra. Giovanna Benavides em seu consultório"
+                src="/giovanna-clinica.webp"
+                alt="Dra. Giovanna Benavides em ambiente clínico"
                 fill
                 priority
                 sizes="(max-width: 800px) 100vw, 48vw"
@@ -237,8 +237,8 @@ export default function Home() {
         <section className="editorial-quote">
           <div className="quote-photo">
             <Image
-              src="/giovanna-clinica.webp"
-              alt="Dra. Giovanna Benavides em ambiente clínico"
+              src="/giovanna-hero.webp"
+              alt="Dra. Giovanna Benavides em seu consultório"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
             />
