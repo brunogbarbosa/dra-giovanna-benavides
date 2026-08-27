@@ -467,5 +467,10 @@ h1 em { color: var(--sage-dark); }
 
 @media (max-width: 620px) {
   .hero-copy { min-height: 545px; padding-top: 52px; }
-  .hero-visual { min-height: 430px; height: 430px; }
+  .hero-visual { min-height: 500px; height: 500px; }
+  .hero-photo-mobile {
+    transform: scale(1.2);
+    transform-origin: center 38%;
+  }
+  .method { padding-top: 72px; }
 }
