@@ -119,7 +119,7 @@ export default function Home() {
               />
               <Image
                 className="hero-photo hero-photo-mobile"
-                src="/hero-dra-mobile.webp"
+                src="/hero-dra-desktop.webp"
                 alt=""
                 aria-hidden="true"
                 fill

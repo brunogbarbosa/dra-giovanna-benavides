@@ -467,10 +467,13 @@ h1 em { color: var(--sage-dark); }
 
 @media (max-width: 620px) {
   .hero-copy { min-height: 545px; padding-top: 52px; }
-  .hero-visual { min-height: 500px; height: 500px; }
+  .hero-visual {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 6 / 7;
+  }
   .hero-photo-mobile {
-    transform: scale(1.2);
-    transform-origin: center 38%;
+    transform: none;
   }
   .method { padding-top: 72px; }
 }
