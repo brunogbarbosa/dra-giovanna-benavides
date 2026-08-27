@@ -71,8 +71,8 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline
 .site-header nav a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -7px; height: 1px; background: var(--ink); transition: right .35s ease; }
 .site-header nav a:hover::after { right: 0; }
 .header-cta { justify-self: end; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; display: flex; gap: 10px; align-items: center; }
-.header-cta span { border: 1px solid var(--line); width: 31px; height: 31px; border-radius: 50%; display: grid; place-items: center; transition: background .3s ease, color .3s ease; }
-.header-cta:hover span { background: var(--ink); color: var(--ivory); }
+.header-cta > svg { border: 1px solid var(--line); width: 31px; height: 31px; padding: 8px; border-radius: 50%; transition: background .3s ease, color .3s ease; }
+.header-cta:hover > svg { background: var(--ink); color: var(--ivory); }
 
 .hero {
   min-height: 760px;
@@ -98,7 +98,8 @@ h1 em, h2 em { color: var(--sage-dark); }
 .hero-actions { display: flex; align-items: center; gap: 34px; margin-top: 40px; animation: fade-up .9s .4s both; }
 .button-primary { background: var(--ink); color: var(--ivory); min-height: 58px; padding: 0 25px; display: inline-flex; align-items: center; gap: 33px; text-transform: uppercase; letter-spacing: .1em; font-size: 9px; transition: background .3s ease, transform .3s ease; }
 .button-primary:hover { background: var(--sage-dark); transform: translateY(-2px); }
-.button-primary span { font-size: 15px; }
+.button-primary svg, .button-light svg, .mobile-booking svg { width: 15px; height: 15px; stroke-width: 1.5; flex: 0 0 auto; }
+.text-link svg, .about-link svg, .treatments-foot a svg { width: 13px; height: 13px; stroke-width: 1.5; flex: 0 0 auto; }
 .text-link { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; border-bottom: 1px solid var(--line); padding: 8px 0; display: flex; gap: 12px; }
 .hero-signature { margin-top: auto; display: flex; flex-direction: column; animation: fade-up .9s .5s both; }
 .hero-signature span { font-family: var(--font-display), serif; font-style: italic; font-size: 24px; color: var(--gold); }
@@ -127,7 +128,7 @@ h1 em, h2 em { color: var(--sage-dark); }
   letter-spacing: -.03em;
 }
 .manifesto-line span { flex: 0 0 auto; }
-.manifesto-line i { flex: 0 0 auto; color: var(--gold); font-size: 18px; font-style: normal; }
+.manifesto-line svg { flex: 0 0 auto; color: var(--gold); width: 28px; height: 28px; stroke-width: 2; }
 .manifesto-line span:first-child { margin-left: -2vw; }
 
 .section-index { align-self: start; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px; color: #716d66; padding-top: 6px; }
@@ -168,7 +169,8 @@ h1 em, h2 em { color: var(--sage-dark); }
 .treatment-row div p { margin: 0 0 7px; color: #c7b895; text-transform: uppercase; letter-spacing: .2em; font-size: 7px; }
 .treatment-row h3 { font-family: var(--font-display), serif; font-size: clamp(28px, 3vw, 43px); line-height: 1; font-weight: 400; margin: 0; }
 .treatment-description { font-size: 10px; line-height: 1.75; color: rgba(255,255,255,.63); max-width: 380px; margin: 0; }
-.treatment-arrow { justify-self: end; width: 39px; height: 39px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; display: grid; place-items: center; font-size: 13px; transition: transform .35s ease, background .35s ease, color .35s ease; }
+.treatment-arrow { justify-self: end; width: 39px; height: 39px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; display: grid; place-items: center; transition: transform .35s ease, background .35s ease, color .35s ease; }
+.treatment-arrow svg { width: 14px; height: 14px; stroke-width: 1.5; }
 .treatment-row:hover .treatment-arrow { transform: rotate(45deg); background: var(--ivory); color: var(--sage-dark); }
 .treatments-foot { margin-top: 36px; display: flex; align-items: center; justify-content: space-between; }
 .treatments-foot p { font-size: 8px; text-transform: uppercase; letter-spacing: .13em; color: rgba(255,255,255,.5); }
@@ -218,8 +220,8 @@ h1 em, h2 em { color: var(--sage-dark); }
 .faq-list summary { min-height: 91px; display: grid; grid-template-columns: 40px 1fr 35px; align-items: center; cursor: pointer; list-style: none; font-family: var(--font-display), serif; font-size: 22px; }
 .faq-list summary::-webkit-details-marker { display: none; }
 .faq-list summary span { font-family: var(--font-sans), sans-serif; color: var(--gold); font-size: 8px; letter-spacing: .15em; }
-.faq-list summary i { font-family: var(--font-sans), sans-serif; font-style: normal; font-size: 17px; text-align: right; transition: transform .3s ease; }
-.faq-list details[open] summary i { transform: rotate(45deg); }
+.faq-list summary > svg { width: 17px; height: 17px; justify-self: end; stroke-width: 1.5; transition: transform .3s ease; }
+.faq-list details[open] summary > svg { transform: rotate(45deg); }
 .faq-list details > p { max-width: 560px; font-size: 11px; line-height: 1.85; color: #5f5a53; padding: 0 45px 30px 40px; margin: -5px 0 0; }
 
 .final-cta { min-height: 630px; background: var(--sage-dark); color: var(--ivory); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 90px 24px; position: relative; overflow: hidden; }
@@ -240,10 +242,12 @@ h1 em, h2 em { color: var(--sage-dark); }
 .footer-brand small { font-size: 7px; text-transform: uppercase; letter-spacing: .18em; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 30px; align-content: center; }
 .footer-links a, .footer-contact { font-size: 8px; text-transform: uppercase; letter-spacing: .13em; }
+.footer-links a { display: inline-flex; align-items: center; gap: 6px; }
+.footer-links a svg, .footer-contact a svg { width: 11px; height: 11px; stroke-width: 1.5; }
 .footer-links a:hover { color: var(--gold); }
 .footer-contact { justify-self: end; text-align: right; align-self: center; }
 .footer-contact p { margin: 0 0 12px; color: #77726b; }
-.footer-contact a { border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+.footer-contact a { border-bottom: 1px solid var(--line); padding-bottom: 5px; display: inline-flex; align-items: center; gap: 6px; }
 .footer-legal { grid-column: 1 / -1; border-top: 1px solid var(--line); margin: 30px 0 0; padding-top: 25px; color: #827d76; font-size: 7px; text-transform: uppercase; letter-spacing: .1em; }
 .mobile-booking { display: none; }
 

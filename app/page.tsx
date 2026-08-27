@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ArrowDown, ArrowUpRight, Dot, Plus } from 'lucide-react';
 
 const bookingUrl = 'https://linktr.ee/dragiovannabenavides';
 const instagramUrl = 'https://www.instagram.com/dragiovannabenavides/';
@@ -81,7 +82,7 @@ export default function Home() {
           <a href="#sobre">A doutora</a>
         </nav>
         <a className="header-cta" href={bookingUrl} target="_blank" rel="noreferrer">
-          Agendar consulta <span aria-hidden="true">↗</span>
+          Agendar consulta <ArrowUpRight aria-hidden="true" />
         </a>
       </header>
 
@@ -96,9 +97,9 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button-primary" href={bookingUrl} target="_blank" rel="noreferrer">
-                Quero minha avaliação <span aria-hidden="true">↗</span>
+                Quero minha avaliação <ArrowUpRight aria-hidden="true" />
               </a>
-              <a className="text-link" href="#metodo">Conheça o método <span aria-hidden="true">↓</span></a>
+              <a className="text-link" href="#metodo">Conheça o método <ArrowDown aria-hidden="true" /></a>
             </div>
             <div className="hero-signature">
               <span>Signature Face™</span>
@@ -122,7 +123,7 @@ export default function Home() {
         </section>
 
         <div className="manifesto-line" aria-label="Naturalidade, precisão e identidade">
-          <span>Naturalidade</span><i>•</i><span>Precisão</span><i>•</i><span>Identidade</span><i>•</i><span>Naturalidade</span>
+          <span>Naturalidade</span><Dot aria-hidden="true" /><span>Precisão</span><Dot aria-hidden="true" /><span>Identidade</span><Dot aria-hidden="true" /><span>Naturalidade</span>
         </div>
 
         <section className="method section-shell" id="metodo">
@@ -197,13 +198,13 @@ export default function Home() {
                   <h3>{treatment.name}</h3>
                 </div>
                 <p className="treatment-description">{treatment.description}</p>
-                <span className="treatment-arrow" aria-hidden="true">↗</span>
+                <span className="treatment-arrow" aria-hidden="true"><ArrowUpRight /></span>
               </article>
             ))}
           </div>
           <div className="treatments-foot section-shell">
             <p>Todo procedimento depende de avaliação clínica individual.</p>
-            <a href={bookingUrl} target="_blank" rel="noreferrer">Descobrir meu plano <span>↗</span></a>
+            <a href={bookingUrl} target="_blank" rel="noreferrer">Descobrir meu plano <ArrowUpRight aria-hidden="true" /></a>
           </div>
         </section>
 
@@ -275,7 +276,7 @@ export default function Home() {
             </div>
           </div>
           <a className="about-link" href={instagramUrl} target="_blank" rel="noreferrer">
-            Acompanhar no Instagram <span aria-hidden="true">↗</span>
+            Acompanhar no Instagram <ArrowUpRight aria-hidden="true" />
           </a>
         </section>
 
@@ -287,7 +288,7 @@ export default function Home() {
           <div className="faq-list">
             {faqs.map((faq, index) => (
               <details key={faq.question}>
-                <summary><span>0{index + 1}</span>{faq.question}<i aria-hidden="true">＋</i></summary>
+                <summary><span>0{index + 1}</span>{faq.question}<Plus aria-hidden="true" /></summary>
                 <p>{faq.answer}</p>
               </details>
             ))}
@@ -299,7 +300,7 @@ export default function Home() {
           <h2>Pronta para reconhecer<br /><em>a sua melhor versão?</em></h2>
           <p>Uma consulta. Uma leitura completa. Um plano com a sua assinatura.</p>
           <a className="button-light" href={bookingUrl} target="_blank" rel="noreferrer">
-            Agendar minha avaliação <span aria-hidden="true">↗</span>
+            Agendar minha avaliação <ArrowUpRight aria-hidden="true" />
           </a>
           <span className="cta-monogram" aria-hidden="true">GB</span>
         </section>
@@ -314,17 +315,17 @@ export default function Home() {
           <a href="#metodo">O método</a>
           <a href="#tratamentos">Tratamentos</a>
           <a href="#resultados">Resultados</a>
-          <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram <ArrowUpRight aria-hidden="true" /></a>
         </div>
         <div className="footer-contact">
           <p>São Paulo · Brasil</p>
-          <a href={bookingUrl} target="_blank" rel="noreferrer">Agendar consulta ↗</a>
+          <a href={bookingUrl} target="_blank" rel="noreferrer">Agendar consulta <ArrowUpRight aria-hidden="true" /></a>
         </div>
         <p className="footer-legal">© 2026 Dra. Giovanna Benavides. Conteúdo informativo; não substitui avaliação profissional.</p>
       </footer>
 
       <a className="mobile-booking" href={bookingUrl} target="_blank" rel="noreferrer">
-        Agendar avaliação <span aria-hidden="true">↗</span>
+        Agendar avaliação <ArrowUpRight aria-hidden="true" />
       </a>
     </main>
   );
