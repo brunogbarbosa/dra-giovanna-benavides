@@ -344,3 +344,91 @@ h1 em, h2 em { color: var(--sage-dark); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Visual direction v2 — high-contrast contemporary medical editorial */
+:root {
+  --ink: #151210;
+  --paper: #f8f4ee;
+  --ivory: #fffdf8;
+  --sage: #a16d73;
+  --sage-dark: #632f3c;
+  --gold: #a77c4c;
+  --line: rgba(21, 18, 16, .14);
+}
+
+body { background: var(--ivory); }
+body::before { display: none; }
+.site-header { width: min(1500px, calc(100% - 72px)); height: 84px; border-color: rgba(21,18,16,.12); }
+.brand-mark { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+.brand-copy strong { font-size: 21px; }
+.site-header nav { gap: 36px; }
+.header-cta { background: var(--sage-dark); color: var(--ivory); padding: 7px 8px 7px 18px; border-radius: 999px; }
+.header-cta > svg { border-color: rgba(255,255,255,.28); }
+.header-cta:hover > svg { background: var(--ivory); color: var(--sage-dark); }
+
+.hero { grid-template-columns: 48% 52%; background: #e8ded5; max-height: 1040px; }
+.hero-copy { background: var(--paper); padding-left: max(36px, calc((100vw - 1500px) / 2 + 36px)); padding-right: clamp(36px, 5vw, 82px); }
+.eyebrow { color: var(--sage-dark); font-weight: 600; }
+h1 { font-size: clamp(76px, 7.5vw, 126px); line-height: .82; }
+h1 em { color: var(--sage-dark); }
+.hero-lead { max-width: 450px; font-size: clamp(20px, 1.55vw, 25px); color: #554b46; }
+.button-primary { background: var(--sage-dark); min-height: 62px; border-radius: 999px; padding-inline: 29px; }
+.button-primary:hover { background: var(--ink); }
+.text-link { border-color: rgba(99,47,60,.35); color: var(--sage-dark); }
+.hero-signature span { color: var(--sage-dark); font-size: 28px; }
+.hero-visual { padding: 84px 0 0; background: #2a211d; }
+.hero-frame { border-radius: 0; animation: fade-up .9s both; }
+.hero-frame::after { background: linear-gradient(180deg, rgba(20,13,10,.02) 42%, rgba(20,13,10,.48)); }
+.hero-frame img { object-position: 50% 44%; filter: saturate(.9) contrast(1.02); }
+.hero-orbit { display: none; }
+.hero-caption { right: 34px; bottom: 30px; }
+
+.manifesto-line { background: var(--sage-dark); color: #f0ddd4; border: 0; height: 104px; }
+.manifesto-line svg { color: #d7aa8c; }
+.section-kicker { color: var(--sage-dark); font-weight: 700; }
+.section-index { color: #7a6860; }
+.method { padding-block: clamp(100px, 10vw, 150px); }
+.method-visual { box-shadow: 24px 24px 0 #eaded3; }
+.method-badge { background: var(--sage-dark); color: var(--ivory); }
+.method-steps h3 { color: var(--sage-dark); }
+
+.treatments { background: var(--ink); }
+.treatments h2 em { color: #d9a9a8; }
+.treatment-row div p { color: #d9a9a8; }
+.treatment-row:hover::before { left: 0; background: var(--sage-dark); }
+.treatments-foot a { color: #f2c9bf; }
+
+.results { background: #fffdf9; }
+.result-card > div { box-shadow: 0 20px 60px rgba(32,20,17,.1); }
+.result-card figcaption span { color: var(--sage-dark); }
+.editorial-quote { background: #d8beb3; }
+.quote-copy { background: #e7d3c9; }
+.quote-mark { color: var(--sage-dark); }
+.quote-copy blockquote em { color: var(--sage-dark); }
+
+.about { background: var(--ivory); }
+.about-credentials strong { color: var(--sage-dark); }
+.faq { background: #f4ebe5; width: 100%; padding-inline: max(32px, calc((100% - 1400px) / 2)); }
+.faq-list summary span { color: var(--sage-dark); }
+.final-cta { background: var(--sage-dark); }
+.final-cta h2 em { color: #f0c8bb; }
+.button-light { border-radius: 999px; }
+.site-footer { background: var(--ivory); }
+
+@media (max-width: 900px) {
+  .site-header { width: calc(100% - 32px); }
+  .hero { grid-template-columns: 1fr; }
+  .hero-copy { padding-left: 24px; padding-right: 24px; }
+  .hero-visual { padding: 0; min-height: 720px; }
+  .hero-frame { border-radius: 0; }
+  .method-visual { box-shadow: 12px 12px 0 #eaded3; }
+}
+
+@media (max-width: 620px) {
+  .hero-copy { min-height: 630px; padding-top: 65px; }
+  h1 { font-size: clamp(66px, 20vw, 90px); }
+  .hero-visual { min-height: 600px; }
+  .manifesto-line { height: 84px; }
+  .faq { padding-inline: 20px; }
+  .mobile-booking { background: var(--sage-dark); border-radius: 999px; }
+}

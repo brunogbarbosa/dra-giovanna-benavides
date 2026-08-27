@@ -15,7 +15,7 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dragiovannabenavides.vercel.app'),
   title: {
     default: 'Dra. Giovanna Benavides | Face Design em São Paulo',
     template: '%s | Dra. Giovanna Benavides',
@@ -24,18 +24,20 @@ export const metadata: Metadata = {
   keywords: ['Giovanna Benavides', 'harmonização orofacial', 'face design', 'Signature Face', 'São Paulo'],
   authors: [{ name: 'Dra. Giovanna Benavides' }],
   creator: 'Dra. Giovanna Benavides',
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
+    url: '/',
     locale: 'pt_BR',
     title: 'Dra. Giovanna Benavides | Seu rosto. Sua assinatura.',
     description: 'Face design com foco em naturalidade. Conheça o Método Signature Face™ em São Paulo.',
-    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'Dra. Giovanna Benavides — Seu rosto. Sua assinatura.' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Dra. Giovanna Benavides — Seu rosto. Sua assinatura.', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dra. Giovanna Benavides | Seu rosto. Sua assinatura.',
     description: 'Face design com foco em naturalidade. Conheça o Método Signature Face™ em São Paulo.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
   robots: { index: true, follow: true },
 };
