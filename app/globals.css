@@ -433,7 +433,7 @@ h1 em { color: var(--sage-dark); }
   .mobile-booking { background: var(--sage-dark); border-radius: 999px; }
 }
 
-/* Hero photography: clean editorial crop on desktop and compact portrait on mobile. */
+/* Hero photography: desktop crop plus an uncropped, intrinsic mobile portrait. */
 .hero-copy { position: relative; z-index: 2; }
 .hero-visual {
   z-index: 1;
@@ -453,16 +453,28 @@ h1 em { color: var(--sage-dark); }
   object-fit: cover;
   object-position: center;
 }
-.hero-photo-mobile { display: none !important; }
+.hero-photo-mobile-full { display: none; }
 
 @media (max-width: 900px) {
   .hero { padding-top: 76px; }
   .hero-copy { min-height: 570px; }
-  .hero-visual { min-height: 520px; height: 520px; padding: 0; }
-  .hero-frame { width: 100%; border-radius: 0; }
-  .hero-photo-desktop { display: none !important; }
-  .hero-photo-mobile { display: block !important; }
-  .hero-caption { right: 22px; bottom: 20px; }
+  .hero-visual {
+    min-height: 0;
+    height: auto;
+    padding: 22px 18px 28px;
+    overflow: visible;
+    background: var(--ivory);
+  }
+  .hero-frame { display: none; }
+  .hero-photo-mobile-full {
+    display: block;
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  .hero-caption, .hero-orbit { display: none; }
 }
 
 @media (max-width: 620px) {
@@ -471,15 +483,6 @@ h1 em { color: var(--sage-dark); }
     min-height: 0;
     height: auto;
     aspect-ratio: auto;
-  }
-  .hero-frame { height: auto; }
-  .hero-photo-mobile {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    transform: none;
-    object-fit: initial !important;
   }
   .method { padding-top: 72px; }
 }

@@ -117,16 +117,16 @@ export default function Home() {
                 priority
                 sizes="(max-width: 800px) 100vw, 48vw"
               />
-              <Image
-                className="hero-photo hero-photo-mobile"
-                src="/giovanna-hero.webp"
-                alt=""
-                aria-hidden="true"
-                width={963}
-                height={1440}
-                sizes="100vw"
-              />
             </div>
+            <Image
+              className="hero-photo-mobile-full"
+              src="/giovanna-hero.webp"
+              alt="Dra. Giovanna Benavides em seu consultório"
+              width={963}
+              height={1440}
+              priority
+              sizes="(max-width: 900px) calc(100vw - 36px), 1px"
+            />
             <div className="hero-orbit" aria-hidden="true"><span>01</span><i /></div>
             <p className="hero-caption">São Paulo · Brasil<br />CROSP 169986</p>
           </div>
